@@ -1,6 +1,6 @@
 import countries
 import random
-
+import copy
 random.seed(a = None)
 def get_player_action():
     got_good_input = False
@@ -198,13 +198,17 @@ def print_owners():
     print("\n\n")
     #return [player1_countries,player2_countries]
 
-
+def get_AI_action(country_dict):
+    print(country_dict["Iceland"])
 turn = 0
 game_over = False
 while not game_over:
     print_owners()
     player1_countries = get_owners()[0]
     player2_countries = get_owners()[1]
+    #
+    #HUMANS TURN
+    #
     if(turn == 0):
         get_player_place(   (len(player1_countries)/3)  + get_continent_bonus(player1_countries))
         action = get_player_action()
@@ -218,8 +222,12 @@ while not game_over:
         else:
             print("You lost %d units, AI lost %d units\n" %(initial_self_troop_strength - battle_result[0],initial_enemy_strength - battle_result[1]))
         turn = 1
+    #
+    #AI TURN
+    #
     if(turn == 1):
-
+        b = copy.deepcopy(countries.countries_dict)
+        get_AI_action(b)
         player1_countries = get_owners()[0]
         player2_countries = get_owners()[1]
         place = random.randint(0,len(player2_countries)-1)
