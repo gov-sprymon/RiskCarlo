@@ -1,6 +1,6 @@
 countries_dict = dict()
 
-startingUnitCount = 4
+startingUnitCount = 3
 
 countries_dict["Alaska"] = [
                         ["Northwest_Territory",
@@ -72,7 +72,7 @@ countries_dict["Peru"] = [
 countries_dict["Brasil"] = [
                         ["Venezuela",
                         "Peru",
-                        "Argentina"
+                        "Argentina",
                         "North_Africa"
                         ],startingUnitCount,1,"South America"]
 countries_dict["Argentina"] = [
@@ -87,7 +87,8 @@ countries_dict["North_Africa"] = [
                         "Southern_Europe",
                         "Egypt",
                         "East_Africa",
-                        "Congo"
+                        "Congo",
+                        "Brasil"
                         ],startingUnitCount,1,"Africa"]
 countries_dict["Egypt"] = [
                         ["Middle_East",
@@ -104,7 +105,8 @@ countries_dict["East_Africa"] = [
                         "Madagascar"
                         ],startingUnitCount,1,"Africa"]
 countries_dict["Congo"] = [
-                        ["North_Africa",
+                        [
+                        "North_Africa",
                         "South_Africa",
                         "East_Africa"
                         ],startingUnitCount,0,"Africa"]
@@ -268,7 +270,7 @@ countries_dict["Middle_East"] = [
 
 NorthAmerica = ["Alaska","Northwest_Territory","Greenland","Alberta","Ontario","Quebec","Western_United_States","Eastern_United_States","Central_America"]
 SouthAmerica = ["Venezuela","Peru","Brasil","Argentina"]
-Africa = ["North_Africa","Egypt","Congo","South Africa","Madagascar","East_Africa"]
+Africa = ["North_Africa","Egypt","Congo","South_Africa","Madagascar","East_Africa"]
 Europe = ["Iceland","Scandinavia","Ukraine","Great_Britain","Northern_Europe","Southern_Europe","Western_Europe"]
 Australia = ["Indonesia","New_Guinea","Western_Australia","Eastern_Australia"]
 Asia = ["Siam","India","China","Mongolia","Japan","Irkutsk","Yakutst","Kamchatka","Siberia","Afghanistan","Ural","Middle_East"]
